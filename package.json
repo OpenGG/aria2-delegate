@@ -1,0 +1,46 @@
+{
+  "name": "aria2-delegate",
+  "version": "1.0.0",
+  "description": "Deletgate cli command to remote aria2 rpc call",
+  "main": "cli.js",
+  "scripts": {
+    "lint": "eslint lib && eslint test -c .eslintrc.test.js",
+    "lint:fix": "eslint lib --fix && eslint test -c .eslintrc.test.js --fix",
+    "test": "NODE_ENV=test jest --verbose --config=./.jest.json",
+    "test:watch": "NODE_ENV=test jest --watch --config=./.jest.json",
+    "test:cov": "jest --verbose --coverage --config=./.jest.json",
+    "precommit": "npm run lint && npm run test:cov",
+    "prepublish": "npm run lint && npm run test:cov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenGG/aria2-delegate.git"
+  },
+  "keywords": [
+    "aria2"
+  ],
+  "engines": {
+    "node": "^7.0.0"
+  },
+  "author": "OpenGG",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/OpenGG/aria2-delegate/issues"
+  },
+  "homepage": "https://github.com/OpenGG/aria2-delegate#readme",
+  "devDependencies": {
+    "babel-jest": "^18.0.0",
+    "babel-preset-env": "^1.1.8",
+    "chai": "^3.5.0",
+    "eslint": "^3.13.1",
+    "eslint-config-opengg": "^1.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-no-async-without-await": "^1.2.0",
+    "husky": "^0.13.0",
+    "jest": "^18.1.0"
+  },
+  "dependencies": {
+    "co": "^4.6.0",
+    "optimist": "^0.6.1"
+  }
+}

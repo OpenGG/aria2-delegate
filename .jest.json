@@ -1,0 +1,8 @@
+{
+  "coverageDirectory": "./coverage",
+  "coverageReporters": ["text", "html"],
+  "collectCoverage": true,
+  "collectCoverageFrom": ["lib/**/*.js", "!**/node_modules/**"],
+  "testEnvironment": "node",
+  "testPathDirs": ["./test"]
+}
