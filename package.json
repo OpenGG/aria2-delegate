@@ -2,7 +2,9 @@
   "name": "aria2-delegate",
   "version": "1.0.0",
   "description": "Deletgate cli command to remote aria2 rpc call",
-  "main": "cli.js",
+  "bin": {
+    "aria2-delegate": "./cli.js"
+  },
   "scripts": {
     "lint": "eslint lib && eslint test -c .eslintrc.test.js",
     "lint:fix": "eslint lib --fix && eslint test -c .eslintrc.test.js --fix",
@@ -41,6 +43,14 @@
   },
   "dependencies": {
     "co": "^4.6.0",
-    "optimist": "^0.6.1"
+    "compose-function": "^3.0.3",
+    "yargs": "^6.6.0"
+  },
+  "yargs": {
+    "short-option-groups": false,
+    "camel-case-expansion": false,
+    "dot-notation": true,
+    "parse-numbers": false,
+    "boolean-negation": false
   }
 }
